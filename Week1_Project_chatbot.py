@@ -1,4 +1,3 @@
-# Responses the chatbot knows
 RESPONSES = {
     "hello": "Hello! I'm DecoBot. How can I help you today?",
     "hi": "Hi! How can I help?",
@@ -33,12 +32,10 @@ EXIT_COMMANDS = {"exit", "quit", "stop", "close", "q"}
 
 
 def sanitize(user_input):
-    # Convert input to lowercase and remove extra spaces
     return user_input.lower().strip()
 
 
 def get_response(user_input):
-    # Return matching response or default message
     return RESPONSES.get(
         user_input,
         "Sorry, I don't understand that. Type 'help' to see what I can do."
